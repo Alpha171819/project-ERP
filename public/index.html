@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>main page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="templateContainor">
+        <div class="mainPage">
+            <div class="btnContainer">
+
+                <input type="radio" class="btn-check cls " name="option" id="classroom">
+                <label class="btn btn-secondary roomsbtn" for="classroom">Class Rooms</label>
+
+                <input type="radio" class="btn-check cls " name="option" id="Seminars">
+                <label class="btn btn-secondary roomsbtn" for="Seminars">Seminars</label>
+
+                <input type="radio" class="btn-check cls " name="option" id="Labs">
+                <label class="btn btn-secondary roomsbtn " for="Labs">Labs</label>
+
+                <a href="AO.html" class="goback">
+                   Notifications
+                   <span class="badge bg-danger"></span>
+
+                </a>
+
+
+            </div>
+            <div class="dateContainar">
+
+                <div class="startdate">
+                    <h3>
+                        DATE
+
+                    </h3> <input type="date" id="return">
+                </div>
+                <div class="periods">
+                    <div class="btn-group " role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check table" name="btnradio" id="first" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="first">9:15AM - 10:15AM</label>
+
+                        <input type="radio" class="btn-check table" name="btnradio" id="second" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="second">10:15AM - 11:15AM</label>
+
+                        <input type="radio" class="btn-check table" name="btnradio" id="third" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="third"> 11:15AM - 12:15PM</label>
+
+                        <input type="radio" class="btn-check table" name="btnradio" id="fourth" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="fourth"> 1:00PM - 2:00PM</label>
+
+                        <input type="radio" class="btn-check table" name="btnradio" id="fifth" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="fifth"> 2:00PM - 3:00PM</label>
+
+                        <input type="radio" class="btn-check table" name="btnradio" id="sixth" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="sixth"> 3:00PM - 4:00PM</label>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="space "><button type="button" class=" checkrooms-btn btn-grad">Check for Rooms</button></div>
+            <div class="rooms">
+                <div class="row1">
+
+                    <input type="radio" class="btn-check room" name="options" id="T1">
+                    <label class="btn btn-secondary" for="T1">T1</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T2">
+                    <label class="btn btn-secondary" for="T2">T2</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T3">
+                    <label class="btn btn-secondary" for="T3">T3</label>
+
+                    <input type="radio" class="btn-check sem" name="options" id="T4">
+                    <label class="btn btn-secondary" for="T4">T4</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T5" disabled>
+                    <label class="btn btn-secondary" for="T5">T5</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T6">
+                    <label class="btn btn-secondary" for="T6">T6</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T7">
+                    <label class="btn btn-secondary" for="T7">T7</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T8">
+                    <label class="btn btn-secondary" for="T8">T8</label>
+
+                    <input type="radio" class="btn-check comp" name="options" id="T9">
+                    <label class="btn btn-secondary" for="T9">T9</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T10">
+                    <label class="btn btn-secondary" for="T10">T10</label>
+                </div>
+                <div class="row2">
+
+
+                    <input type="radio" class="btn-check room" name="options" id="T11">
+                    <label class="btn btn-secondary" for="T11">T11</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T12">
+                    <label class="btn btn-secondary" for="T12">T12</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T13">
+                    <label class="btn btn-secondary" for="T13">T13</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T14">
+                    <label class="btn btn-secondary" for="T14">T14</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T15">
+                    <label class="btn btn-secondary" for="T15">T15</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T16">
+                    <label class="btn btn-secondary" for="T16">T16</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T17">
+                    <label class="btn btn-secondary" for="T17">T17</label>
+
+                    <input type="radio" class="btn-check comp" name="options" id="T18">
+                    <label class="btn btn-secondary" for="T18">T18</label>
+
+                    <input type="radio" class="btn-check comp" name="options" id="T19">
+                    <label class="btn btn-secondary" for="T19">T19</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="T20">
+                    <label class="btn btn-secondary" for="T20">T20</label>
+                </div>
+                <div class="row1">
+
+                    <input type="radio" class="btn-check room" name="options" id="S1">
+                    <label class="btn btn-secondary" for="S1">S1</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="2">
+                    <label class="btn btn-secondary" for="S2">S2</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S3">
+                    <label class="btn btn-secondary" for="S3">S3</label>
+
+                    <input type="radio" class="btn-check sem" name="options" id="S4">
+                    <label class="btn btn-secondary" for="S4">S4</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S5" disabled>
+                    <label class="btn btn-secondary" for="S5">S5</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S6">
+                    <label class="btn btn-secondary" for="S6">S6</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S7">
+                    <label class="btn btn-secondary" for="S7">S7</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S8">
+                    <label class="btn btn-secondary" for="S8">S8</label>
+
+                    <input type="radio" class="btn-check comp" name="options" id="S9">
+                    <label class="btn btn-secondary" for="S9">S9</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S10">
+                    <label class="btn btn-secondary" for="S10">S10</label>
+                </div>
+                <div class="row2">
+
+
+                    <input type="radio" class="btn-check room" name="options" id="S11">
+                    <label class="btn btn-secondary" for="S11">S11</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S12">
+                    <label class="btn btn-secondary" for="S12">S12</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S13">
+                    <label class="btn btn-secondary" for="S13">S13</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S14">
+                    <label class="btn btn-secondary" for="S14">S14</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S15">
+                    <label class="btn btn-secondary" for="S15">S15</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S16">
+                    <label class="btn btn-secondary" for="S16">S16</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S17">
+                    <label class="btn btn-secondary" for="S17">S17</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="18">
+                    <label class="btn btn-secondary" for="S18">S18</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S19">
+                    <label class="btn btn-secondary" for="S19">S19</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="S20">
+                    <label class="btn btn-secondary" for="S20">S20</label>
+                </div>
+                <div class="row1">
+
+                    <input type="radio" class="btn-check room" name="options" id="F1">
+                    <label class="btn btn-secondary" for="F1">F1</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F2">
+                    <label class="btn btn-secondary" for="F2">F2</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F3">
+                    <label class="btn btn-secondary" for="F3">F3</label>
+
+                    <input type="radio" class="btn-check sem" name="options" id="F4">
+                    <label class="btn btn-secondary" for="F4">F4</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F5" disabled>
+                    <label class="btn btn-secondary" for="F5">F5</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F6">
+                    <label class="btn btn-secondary" for="F6">F6</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F7">
+                    <label class="btn btn-secondary" for="F7">F7</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F8">
+                    <label class="btn btn-secondary" for="F8">F8</label>
+
+                    <input type="radio" class="btn-check comp" name="options" id="F9">
+                    <label class="btn btn-secondary" for="F9">F9</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F10">
+                    <label class="btn btn-secondary" for="F10">F10</label>
+                </div>
+                <div class="row2">
+
+
+                    <input type="radio" class="btn-check room" name="options" id="F11">
+                    <label class="btn btn-secondary" for="F11">F11</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F12">
+                    <label class="btn btn-secondary" for="F12">F12</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F13">
+                    <label class="btn btn-secondary" for="F13">F13</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F14">
+                    <label class="btn btn-secondary" for="F14">F14</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F15">
+                    <label class="btn btn-secondary" for="F15">F15</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F16">
+                    <label class="btn btn-secondary" for="F16">F16</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F17">
+                    <label class="btn btn-secondary" for="F17">F17</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F18">
+                    <label class="btn btn-secondary" for="F18">F18</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F19">
+                    <label class="btn btn-secondary" for="F19">F19</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="F20">
+                    <label class="btn btn-secondary" for="F20">F20</label>
+                </div>
+                <div class="row1">
+
+                    <input type="radio" class="btn-check room" name="options" id="G1">
+                    <label class="btn btn-secondary" for="G1">G1</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G2">
+                    <label class="btn btn-secondary" for="G2">G2</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G3">
+                    <label class="btn btn-secondary" for="G3">G3</label>
+
+                    <input type="radio" class="btn-check sem" name="options" id="G4">
+                    <label class="btn btn-secondary" for="G4">G4</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G5" disabled>
+                    <label class="btn btn-secondary" for="G5">G5</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G6">
+                    <label class="btn btn-secondary" for="G6">G6</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G7">
+                    <label class="btn btn-secondary" for="G7">G7</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G8">
+                    <label class="btn btn-secondary" for="G8">G8</label>
+
+                    <input type="radio" class="btn-check comp" name="options" id="G9">
+                    <label class="btn btn-secondary" for="G9">G9</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G10">
+                    <label class="btn btn-secondary" for="G10">G10</label>
+                </div>
+                <div class="row2">
+
+
+                    <input type="radio" class="btn-check room" name="options" id="G11">
+                    <label class="btn btn-secondary" for="G11">G11</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G12">
+                    <label class="btn btn-secondary" for="G12">G12</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G13">
+                    <label class="btn btn-secondary" for="G13">G13</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G14">
+                    <label class="btn btn-secondary" for="G14">G14</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G15">
+                    <label class="btn btn-secondary" for="G15">G15</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G16">
+                    <label class="btn btn-secondary" for="G16">G16</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G17">
+                    <label class="btn btn-secondary" for="G17">G17</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G18">
+                    <label class="btn btn-secondary" for="G18">G18</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G19">
+                    <label class="btn btn-secondary" for="G19">G19</label>
+
+                    <input type="radio" class="btn-check room" name="options" id="G20">
+                    <label class="btn btn-secondary" for="G20">G20</label>
+                </div>
+                <div class="space low"><button type="button" class="btn-grad" id="Reserve">Reserve Room</button></div>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

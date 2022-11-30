@@ -1,0 +1,266 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+}
+
+.btnContainer form,
+.dateContainar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btnContainer {
+    padding: 30px;
+}
+
+.periods {
+    margin-top: 10px;
+}
+
+.btns {
+    border: 1px solid black;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    width: 170px;
+    height: 46px;
+}
+
+.space {
+    height: 200px;
+}
+
+.rooms {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.row1,
+.row2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-check,
+.btn-secondary,
+.roomsbtn {
+    --bs-btn-active-bg: #33b249;
+    background-color: #3a6b35;
+    --bs-btn-bg: #33b249;
+    color: aliceblue;
+}
+
+.btn {
+    --bs-btn-border-radius: 20px;
+}
+
+.space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:active {
+    transform: scale(1.2);
+}
+
+.btn-group {
+    display: inline;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border: 2px solid rgb(117, 111, 111);
+    margin: 10px;
+}
+
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accept {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    margin: 8px;
+}
+
+.accept:hover,
+.decline:hover {
+    cursor: pointer;
+}
+
+.decline {
+    background-color: rgb(224, 5, 5);
+    /* red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    margin: 8px;
+}
+
+.goback {
+    width: 170px;
+    height: 46px;
+    text-decoration: none;
+    background-color: #3a6b35;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    padding: 8px 14px;
+    /* display: none; */
+}
+
+a:hover {
+    color: white;
+}
+
+.btn-outline-primary {
+    --bs-btn-border-color: #161616;
+    --bs-btn-active-bg: #3a6b35;
+    --bs-btn-active-border-color: #121311;
+    --bs-btn-color: #121312;
+}
+
+.btn-grad,
+.accordion {
+    background-image: linear-gradient(to right, #52c234 0%, #143d05 50%, #52c234 100%);
+    margin: 10px;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 30px;
+    display: block;
+}
+
+.btn-grad:hover,
+.accordion:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.03);
+}
+
+.signup-box {
+    width: 80%;
+    max-width: 370px;
+    border: 1px solid rgba(116, 116, 116, 0.76);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .75rem;
+    padding: 10px 0;
+}
+
+.signup-box img {
+    width: 30%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.signup-box input {
+    width: 85%;
+    height: 40px;
+    margin: 12px auto;
+    display: block;
+    border: 1px solid rgba(116, 116, 116, 0.76);
+    border-radius: .75rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    padding-left: 15px;
+}
+
+.signup-box input:focus {
+    outline: none;
+}
+
+#check {
+    width: 20px;
+    max-width: 20px;
+    margin: 0 0 0 5%;
+    padding: 0;
+    height: 20px;
+    display: inline;
+}
+
+.label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding-left: 9px;
+    position: absolute;
+}
+
+#submit-btn {
+    width: auto;
+    padding: 0 30px;
+    background-color: #5271FF;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    height: 50px;
+    transition: 0.15s;
+    float: right;
+    margin: 35px 5% 12px 0;
+    cursor: default;
+}
+
+.submit-div {
+    height: 200px;
+    width: 80%;
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: .75rem;
+    border: 1px solid rgba(116, 116, 116, 0.76);
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 50px rgba(43, 43, 43, 0.247);
+    display: block;
+}
+
+.submit-div i {
+    font-size: 40px;
+    padding-top: 50px;
+    color: #5271FF;
+}
+
+.submit-div h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

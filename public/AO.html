@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <a href="index.html" class="goback">
+       BACK
+    </a>
+
+
+    <div class="my div" id="name">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "/waiting/rooms",
+            data: {},
+            success: function(roomsdata) {
+                console.log(roomsdata);
+                roomsdata.forEach((el) => {
+                    var button = document.createElement("button");
+                    // var div=document.createElement("div");
+                    var p = document.createElement('p');
+                    // div.appendChild(p);
+                    var button1 = document.createElement("button");
+                    var button2 = document.createElement("button");
+                    button1.setAttribute('class', 'accept');
+                    button2.setAttribute('class', 'decline');
+                    button1.innerHTML = '<div>Accept</div>';
+                    button2.innerHTML = '<div>Decline</div>';
+
+                    button.innerHTML = `<h3> ${el.choice}  ${el.classroom} </h3>` + `<h3> At ${el.periodNumber} hour  on ${el.date}:${el.month}:${el.year} </h3>`;
+
+                    button.setAttribute('class', 'accordion');
+                    //div.setAttribute('class','panel');
+                    button.addEventListener('click', () => {
+                        button.appendChild(p);
+                        p.appendChild(button1);
+                        p.appendChild(button2);
+                    });
+                    document.getElementById('name').appendChild(button);
+                    button1.addEventListener('click', () => {
+                        button.removeChild(p);
+                        button.style.display = 'none';
+                        $.ajax({
+                            type: "GET",
+                            url: '/Reserve/from/AO/Granted',
+                            data: el,
+                            success: function() {
+                                console.log(" sucessfully inserted by AO");
+
+
+                            },
+                            error: function() {
+                                console.log(" error while sending data  to backend AO insert");
+                            }
+
+                        });
+                        $.ajax({
+                            type: "POST",
+                            url: '/Reserve/from/AO/Granted',
+                            data: el,
+                            success: function() {
+                                console.log(" sucessfully deleted by AO");
+                            },
+                            error: function() {
+                                console.log(" error while sending data  to backend AO delete");
+                            }
+
+                        });
+
+                    });
+                    button2.addEventListener('click', () => {
+                        button.removeChild(p);
+                        button.style.display = 'none';
+                        $.ajax({
+                            type: "POST",
+                            url: '/declined/by/AO',
+                            data: el,
+                            success: function() {
+                                console.log(" sucessfully deleted by AO");
+                            },
+                            error: function() {
+                                console.log(" error while sending data  to backend AO delete");
+                            }
+
+                        });
+
+
+                    });
+
+                });
+
+            },
+            error: function() {
+                console.log(" error while sending data  to backend");
+            }
+
+        });
+    </script>
+</body>
+
+
+</html>
