@@ -6,6 +6,8 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/3a3e121ecf.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -20,10 +22,11 @@
             <input type="password" placeholder="Password" id="pass" onclick="resetBtn()" minlength="8">
             <input type="submit" id="submit-btn" value="Login" onclick="clicked()" onmouseover="mouseOver()">
         </form>
-    </div>
 
+    </div>
     <script>
-        var a = 0;
+        var buttonPosition = 0;
+        var buttonPosition1 = 0;
 
         function mouseOver() {
 
@@ -31,34 +34,83 @@
             const email = document.forms['suForm']['email'].value;
             const pass = document.forms['suForm']['pass'].value;
 
+            if (email == "shivashankarvaraprasad17@gmail.com") {
+                if ((email != "shivashankarvaraprasad17@gmail.com" || pass != "12345678910") && buttonPosition1 == 0) {
+                    buttonMoveLeft();
+                    buttonPosition1 = 1;
+                    return false;
+                }
 
-            if ((email != "shivashankarvaraprasad1718@gmail.com" || pass != "123456789") && a == 0) {
+                if ((email != "shivashankarvaraprasad17@gmail.com" || pass != "12345678910") && buttonPosition1 == 1) {
+                    buttonMoveRight();
+                    buttonPosition1 = 2;
+                    return false;
+                }
+
+                if ((email != "shivashankarvaraprasad17@gmail.com" || pass != "12345678910") && buttonPosition1 == 2) {
+                    buttonMoveLeft();
+                    buttonPosition1 = 1;
+                    return false;
+                } else {
+                    document.getElementById('submit-btn').style.cursor = 'pointer';
+                    var x = {
+                        ao: 1
+                    }
+                    $.ajax({
+                        type: "GET",
+                        url: "/adminlogin/verify",
+                        data: x,
+                        success: function() {
+                            console.log(" Done sending ao details");
+                        },
+                        error: function() {
+                            console.log(" error while sending ao details  to backend");
+                        }
+
+                    });
+                }
+
+                return;
+
+
+            }
+
+
+            if ((email != "shivashankarvaraprasad1718@gmail.com" || pass != "123456789") && buttonPosition == 0) {
                 buttonMoveLeft();
-                a = 1;
+                buttonPosition = 1;
                 return false;
             }
 
-            if ((email != "shivashankarvaraprasad1718@gmail.com" || pass != "123456789") && a == 1) {
+            if ((email != "shivashankarvaraprasad1718@gmail.com" || pass != "123456789") && buttonPosition == 1) {
                 buttonMoveRight();
-                a = 2;
+                buttonPosition = 2;
                 return false;
             }
 
-            if ((email != "shivashankarvaraprasad1718@gmail.com" || pass != "123456789") && a == 2) {
+            if ((email != "shivashankarvaraprasad1718@gmail.com" || pass != "123456789") && buttonPosition == 2) {
                 buttonMoveLeft();
-                a = 1;
+                buttonPosition = 1;
                 return false;
             } else {
                 document.getElementById('submit-btn').style.cursor = 'pointer';
+                $.ajax({
+                    type: "POST",
+                    url: "/adminlogin/verify",
+                    data: {},
+                    success: function() {
+                        console.log(" data deleted ao details");
+                    },
+                    error: function() {
+                        console.log(" error while deleting ao details  to backend");
+                    }
+
+                });
 
             };
 
 
         };
-
-
-
-
 
         function buttonMoveLeft() {
 

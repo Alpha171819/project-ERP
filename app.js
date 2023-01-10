@@ -11,6 +11,9 @@ var reserveRoomsRouter = require('./routes/reserveRooms');
 var waitingRouter = require("./routes/waiting");
 var reservefromAO = require("./routes/reservefromAO");
 var declinedbyAO = require("./routes/declinedbyAO");
+var adminlogin = require("./routes/admindetails");
+var verifyingLogin = require("./routes/verifyingLogin");
+
 
 
 
@@ -34,6 +37,9 @@ app.use('/reserving/rooms/in/db', reserveRoomsRouter);
 app.use('/waiting/rooms', waitingRouter);
 app.use('/Reserve/from/AO/Granted', reservefromAO);
 app.use('/declined/by/AO', declinedbyAO);
+app.use('/adminlogin/verify', adminlogin);
+app.use('/verify/if/Ao', verifyingLogin);
+
 
 
 

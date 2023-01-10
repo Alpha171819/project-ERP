@@ -1,4 +1,21 @@
 $(document).ready(() => {
+    $.ajax({
+        type: "POST",
+        url: "/verify/if/Ao",
+        data: {},
+        success: function(datafound) {
+
+            // console.log(datafound);
+            if (datafound.length === 0) $(".goback").css('display', 'none')
+            else $(".goback").css('display', 'inline')
+
+        },
+        error: function() {
+            console.log(" error while geting loging verification from backend");
+        }
+
+    });
+
     $(() => {
         var date = new Date();
         console.log(date)
@@ -69,15 +86,7 @@ $(document).ready(() => {
                 choice: $('.cls:checked').attr('id'),
                 classroom: $('.tick:checked').attr('id')
             }
-
-
-
             alert("you have selected " + reserverooms.choice + " (" + reserverooms.classroom + ") " + " on " + reserverooms.date + "/" + reserverooms.month + "/" + reserverooms.year + " period number is : " + reserverooms.periodNumber + " your Request is sent to AO Please contact for Approval");
-
-
-
-
-
             $.ajax({
                 type: "GET",
                 url: "/reserving/rooms/in/db",
@@ -142,5 +151,6 @@ $(document).ready(() => {
 
 
     });
+
 
 });
